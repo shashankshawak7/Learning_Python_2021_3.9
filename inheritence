@@ -1,0 +1,37 @@
+
+
+class human:
+    def __init__(self):
+        self.breathing='Oxygen'
+        self.legs=2
+        self.hands=1
+        self.alive=True
+        self.emotions=True
+
+class Male(human):
+    def __init__(self):
+        human.__init__(self)
+        self.Meight=6
+        self.Mody='Tough'
+        self.Mender='M'
+        self.Meard=True
+    def speak(self,lang,country):
+        self.language=lang
+        self.country=country
+
+class Female(human):
+    def __init__(self):
+        human.__init__(self)
+        self.Feight=5
+        self.Fody='Soft'
+        self.Fender='F'
+        self.Feard=False
+    def speak(self,lang,country):
+        self.language=lang
+        self.country=country
+
+class child(Male, Female):
+    def __init__(self):
+        super().__init__(child)
+
+#https://www.programiz.com/python-programming/methods/built-in/super
