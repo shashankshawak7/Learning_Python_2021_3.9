@@ -1,0 +1,28 @@
+import logging
+import pdb
+logging.basicConfig(level=logging.DEBUG)
+
+class newlist:
+    def __init__(self):
+
+        self.name = []
+        logging.debug(self.name)
+
+    def __SALARY(self,a,b):
+        self.a =a
+        self.b =b 
+        self.a += self.a*self.b
+        return self.a
+
+
+
+    def appraisal(self, current_salary, rating):
+        self.rating = rating
+        self.currrnt_salary =  current_salary
+        if self.rating == 'A':
+            return self.__SALARY(self.currrnt_salary,0.10)
+
+        elif self.rating == 'B':
+            return self.__SALARY(self.currrnt_salary,0.08)
+        else:
+            return self.__SALARY(self.currrnt_salary,0.04)
