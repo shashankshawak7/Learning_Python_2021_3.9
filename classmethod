@@ -1,0 +1,42 @@
+#classmethod
+
+class HumanClass:
+    name = 'shashank'
+    def __init__(self):
+        self.heart = True
+
+    @classmethod
+    def naming(cls):
+        cls.name = 'shawak'
+
+
+class Employee:
+    percent_hike = 0.10
+
+    def __init__(self, ename, edesig):
+        self.ename = ename
+        self.edesig = edesig
+        self.salary = 0
+
+    def salarys(self):
+        if self.edesig == 3:
+            self.salary = 10000
+        if self.edesig == 2:
+            self.salary = 100000
+        if self.edesig == 1:
+            self.salary = 150000
+
+    def hike(self):
+        self.salary = self.salary + self.salary*self.percent_hike
+        print(self.salary)
+    @classmethod
+    def hike_change(cls):
+        cls.percent_hike = 0.25
+
+    @classmethod
+    def create_employee(cls, ename, edesig):
+        e = Employee(ename,edesig)
+        e.salary
+        return e
+
+
